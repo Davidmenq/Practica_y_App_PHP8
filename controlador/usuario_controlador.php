@@ -11,6 +11,7 @@ class UsuarioControlador extends Usuario{
     }
     public function mostrarUsuario(){
         $id = $_REQUEST["id"];
+
         if(isset($id)){ //verifica que no este vacio
             $usuario = $this->consultarUno($id);
         }
@@ -24,7 +25,7 @@ class UsuarioControlador extends Usuario{
         $this->telefono = $_REQUEST["telefono"];
         $this->edad = $_REQUEST["edad"];
 
-        $this->id ? $this->actualizar() : $this->insertar(); //verifica si existe el id actualiza, de lo contrario inserta
+        $this->id>0?$this->actualizar():$this->insertar(); //verifica si existe el id actualiza, de lo contrario inserta
 
         header("Location:index.php"); //redirecciona al index
     }

@@ -20,8 +20,8 @@
             <td><?php echo$usuario->apellido ?></td>
             <td><?php echo$usuario->telefono ?></td>
             <td><?php echo$usuario->edad ?></td>
-            <td><a href="">Editar</a></td>
-            <td><a onclick="javascript:return confirm('¿Seguro de eliminar este registro?')" href="">Eliminar</a></td>
+            <td><a href="index.php?controlador=usuario&accion=mostrarUsuario&id=<?php echo $usuario->id?>">Editar</a></td>
+            <td><a href="index.php?controlador=usuario&accion=eliminar&id=<?php echo $usuario->id?>" onclick="javascript:return confirm('¿Seguro de eliminar este registro?')">Eliminar</a></td>
         </tr>
         <?php endforeach;?>
     </table>

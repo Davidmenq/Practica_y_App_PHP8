@@ -21,7 +21,7 @@ class crud extends Conexion{
 
     public function consultarUno(int $id){
         try{
-            $stm = $this->pdo->prepare("SELECT * FROM $this->tabla WHERE id=?");//para prevenir la inyeccion sql el dato id se verifica
+            $stm = $this->pdo->prepare("SELECT * FROM $this->tabla WHERE id=? ");//para prevenir la inyeccion sql el dato id se verifica
             $stm->execute([$id]);//el dato requerido se env'ia a execute que es el que verifica
             return $stm->fetch(PDO::FETCH_OBJ);
         }catch(PDOException $mensaje){
