@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="index.php?controlador=usuario&accion=mostrarUsuario">Nuevo</a>
+
     <table>
         <tr>
             <?php 
